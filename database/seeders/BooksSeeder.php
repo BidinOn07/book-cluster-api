@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 use App\Models\Book;
 
 class BooksSeeder extends Seeder
@@ -76,6 +77,8 @@ class BooksSeeder extends Seeder
                 'read_count' => 4500,
             ],
         ];
+
+        DB::table("books")->truncate();
         foreach ($data as $book) {
             Book::create($book);
         }
