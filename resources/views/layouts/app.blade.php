@@ -12,7 +12,7 @@
 </head>
 <body>
     <nav>
-        <ul>
+    <ul>
             <li><a href="{{ route('books.index') }}">Daftar Buku</a></li>
             <li><a href="{{ route('books.create') }}">Tambah Buku</a></li>
         </ul>

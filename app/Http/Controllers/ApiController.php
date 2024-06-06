@@ -9,7 +9,8 @@ class ApiController extends Controller
 {
     public function getBooks()
     {
-        return response()->json(Book::all());
+        $books = Book::all();
+        return response()->json($books);
     }
 
     public function getBook($id)
